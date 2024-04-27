@@ -19,16 +19,8 @@ export default function HomePage() {
               Are you willing to take this to the next level?
             </p>
             <div className="flex justify-center gap-2">
-              <button
-                className="btn btn-primary rounded-lg"
-              >
-                Yes
-              </button>
-              <button
-                className="btn btn-neutral rounded-lg"
-              >
-                No
-              </button>
+              <button className="btn btn-primary rounded-lg">Yes</button>
+              <button className="btn btn-neutral rounded-lg">No</button>
             </div>
           </div>
         </div>

@@ -1,6 +1,4 @@
-import {
-  pgTableCreator
-} from "drizzle-orm/pg-core";
+import { pgTableCreator } from "drizzle-orm/pg-core";
 import { buildMessageTableCreator } from "./drizzle/message-schema";
 
 /**
@@ -10,6 +8,6 @@ import { buildMessageTableCreator } from "./drizzle/message-schema";
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
 export const createTable = pgTableCreator((name) => `reljodoreta_${name}`);
-export const invitationMessage = buildMessageTableCreator({ tableCreator: createTable }).create('invitation_message');
-
-
+export const invitationMessage = buildMessageTableCreator({
+  tableCreator: createTable,
+}).create("invitation_message");

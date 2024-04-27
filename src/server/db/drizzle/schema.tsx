@@ -1,3 +1,3 @@
-import { buildMessageTableCreator } from './message-schema';
+import { buildMessageTableCreator } from "./message-schema";
 
 export default { buildMessageTableCreator };
