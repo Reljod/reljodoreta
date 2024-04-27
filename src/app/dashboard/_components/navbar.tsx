@@ -31,7 +31,7 @@ export default function NavigationBar(props: Props | undefined) {
         </div>
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">
-            {props?.title || DEFAULT_DASHBOARD_NAV_TITLE}
+            {props?.title ?? DEFAULT_DASHBOARD_NAV_TITLE}
           </a>
         </div>
         <div className="hidden flex-none lg:block">

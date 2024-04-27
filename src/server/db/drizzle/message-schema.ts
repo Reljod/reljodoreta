@@ -4,7 +4,6 @@ import {
   IndexColumn,
   PgTableFn,
   index,
-  pgTable,
   text,
   timestamp,
   varchar,
