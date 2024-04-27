@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
     <main>
@@ -19,8 +21,12 @@ export default function HomePage() {
               Are you willing to take this to the next level?
             </p>
             <div className="flex justify-center gap-2">
-              <button className="btn btn-primary rounded-lg">Yes</button>
-              <button className="btn btn-neutral rounded-lg">No</button>
+              <button className="btn btn-primary rounded-lg">
+                <Link href="/dashboard">Yes</Link>
+              </button>
+              <button className="btn btn-neutral rounded-lg">
+                <Link target="_blank" href="https://google.com">No</Link>
+              </button>
             </div>
           </div>
         </div>
