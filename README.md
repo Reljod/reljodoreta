@@ -2,8 +2,9 @@
 
 ## MVP Checklist (v0.1.0)
 - [x] Create initial app
-- [ ] Connect with database
+- [x] Connect with database
 - [ ] Create page that lists down all the app
+    - [ ] Create Navigation
     - [ ] Clicking the picture should route it to the route of the app.
     - [ ] Create one for invitation app
     - [ ] Show `no apps to show` if there are no apps available
