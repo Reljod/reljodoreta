@@ -5,7 +5,7 @@
 - [x] Connect with database
 - [ ] Create page that lists down all the app
     - [x] Create Navigation for Apps
-    - [ ] Create Authentication
+    - [x] Create Authentication
     - [ ] Clicking the picture should route it to the route of the app.
     - [ ] Create one for invitation app
     - [ ] Show `no apps to show` if there are no apps available
