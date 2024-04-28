@@ -1,3 +1,9 @@
+"use client";
+
+import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
+import Link from "next/link";
+import BlankProfile from "~/components/svg/blank-profile";
+
 const DEFAULT_DASHBOARD_NAV_TITLE = "reljodoreta";
 
 interface Props {
@@ -5,9 +11,11 @@ interface Props {
 }
 
 export default function NavigationBar(props: Props | undefined) {
+  const { isSignedIn } = useUser();
+
   return (
     <nav>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 px-4">
         <div className="flex-none lg:hidden">
           <label
             htmlFor="my-drawer-3"
@@ -44,11 +52,30 @@ export default function NavigationBar(props: Props | undefined) {
             </li>
           </ul>
         </div>
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <img alt="User Mock Profile" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        <SignedOut>
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="avatar btn btn-circle btn-ghost"
+            >
+              <div className="w-8 rounded-full">
+                <BlankProfile />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+            >
+              <li>
+                <Link href="/sign-in">Sign in</Link>
+              </li>
+            </ul>
           </div>
-        </div>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </nav>
   );
